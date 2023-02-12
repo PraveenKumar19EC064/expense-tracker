@@ -64,6 +64,7 @@
 </template>
 
 <script>
+import * as API from "@/api/api.js";
 export default {
   data() {
     return {
@@ -87,6 +88,9 @@ export default {
       ],
       mini: true,
     };
+  },
+  mounted() {
+    API.auth();
   },
   methods: {
     isBarDisabled() {
